@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,10 +16,17 @@ export default function Home() {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+            <Link href="https://youtube.com" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Home
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <footer className="flex h-20 w-full items-center px-4">
+        <p className="mx-auto">Footer</p>
+      </footer>
     </>
   );
 }
